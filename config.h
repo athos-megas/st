@@ -169,6 +169,7 @@ static unsigned int defaultattr = 11;
  * modifier, set to 0 to not use it.
  */
 static uint forcemousemod = ShiftMask;
+static int scrollback = 1000;
 
 /*
  * Internal mouse shortcuts.
@@ -201,6 +202,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ShiftMask, 		XK_Page_Up,	kscrollup, 	{.i = -1} },
+	{ ShiftMask, 		XK_Page_Down, 	kscrolldown, 	{.i = -1} },
 };
 
 /*
